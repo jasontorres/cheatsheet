@@ -6,7 +6,7 @@ args = ARGV.clone
 
 
 if !args[0].nil?
-  Cheatsheet::Client.fetch args
+  Cheatsheet::Client.fetch args[0].first
 else
   puts "Usage: cheatsheet <cheatsheet-name>"
 end

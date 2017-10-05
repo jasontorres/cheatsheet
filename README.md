@@ -1,10 +1,14 @@
 # Cheatsheet
 
-A terminal client for the best cheatsheet site in the planet devhints.io
+A terminal client for the best cheatsheet site in the planet https://devhints.io
+
+## To install
 
 ```
 gem install cheatsheet
 ```
+
+## Browse some cheats
 
 ```
 cheatsheet webpack

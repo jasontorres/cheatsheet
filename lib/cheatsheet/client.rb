@@ -6,7 +6,12 @@ module Cheatsheet
     def self.fetch(*args)
       key = args[0].first
       uri = URI(SOURCE + key + ".md")
-      puts self.fetch_raw(uri)
+
+      begin
+        puts self.fetch_raw(uri)
+      rescue CheatSheetClientException => e
+        puts e.message
+      end
     end
 
     def self.fetch_raw(uri)

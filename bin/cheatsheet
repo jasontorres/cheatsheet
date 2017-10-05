@@ -4,4 +4,9 @@ require "cheatsheet"
 
 args = ARGV.clone
 
-Cheatsheet::Client.fetch args
+
+if !args[0].nil?
+  Cheatsheet::Client.fetch args
+else
+  puts "Usage: cheatsheet <cheatsheet-name>"
+end

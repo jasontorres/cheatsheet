@@ -3,9 +3,8 @@ module Cheatsheet
 
     SOURCE = "https://raw.githubusercontent.com/rstacruz/cheatsheets/gh-pages/"
 
-    def self.fetch(*args)
-      key = args[0].first
-      uri = URI(SOURCE + key + ".md")
+    def self.fetch(sheet_name)
+      uri = URI(SOURCE + sheet_name + ".md")
 
       begin
         puts self.fetch_raw(uri)
